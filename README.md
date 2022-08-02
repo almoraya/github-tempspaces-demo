@@ -83,7 +83,7 @@ Below we can see what attributes make up a song file:
 
 Unlike the song files, which are real data, the log files are simulated files. They were created using an external tool ([event simulator](https://github.com/Interana/eventsim)). These files are divided by month; however, only generated data for the month of November was used.
 
-The log file have the following structure:
+The log files have the following structure:
 ```
 log_data/2018/11/2018-11-12-events.json
 log_data/2018/11/2018-11-13-events.json
@@ -93,6 +93,7 @@ log_data/2018/11/2018-11-13-events.json
 
 The output files (dimensions and fact tables for our model) are also stored in an S3 bucket. The files here can be used later for further processing and conversion.
 Our output bucket has the following structure:
+
 ```
 Output data: s3://<my-bucket>/<dim name>/<table name.parquet>/
 ```
