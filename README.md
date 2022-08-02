@@ -74,11 +74,21 @@ In this case, we will deploy our Spark job using only two files: a configuration
 
 ## Getting started with Amazon EMR
 
-Below are excerpts from the Amazon EMR tutorial web page.[("Getting started with Amazon EMR")](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-gs.html)
+Below are some steps to consider when working with Amazon EMR. [("Getting started with Amazon EMR")](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-gs.html)
 
 <p align="center">
 <img  width="50%" height= "50%" src=/images/awsemr.png alt="EMR Workflow">
 </p>
+
+In order to be able to run the etl.py script on Amazon EMR you need to do consider the following:
+
+- Step 1: Plan and configure an Amazon EMR Cluster
+  - Prepare storage for Amazon EMR (have access to your S3 bucket)
+  - Prepare an application with input data from Amazon EMR (udacity bucket with both song and log files)
+  - Prepare the etl.py Pyspark script for EMR
+
+- Step 2: Submit your etl.py script to Amazon EMR
+  - View results --> creation of dimension tables stores in your output data bucket in S3
 
 
 <a name="files"/>
