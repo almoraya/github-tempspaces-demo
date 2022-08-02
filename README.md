@@ -80,7 +80,7 @@ Below are some steps to consider when working with Amazon EMR. [("Getting starte
 <img  width="50%" height= "50%" src=/images/awsemr.png alt="EMR Workflow">
 </p>
 
-In order to be able to run the etl.py script on Amazon EMR you need to do consider the following:
+In order to be able to run the etl.py script on Amazon EMR you need to consider the following:
 
 - Step 1: Plan and configure an Amazon EMR Cluster
   - Prepare storage for Amazon EMR (have access to your S3 bucket)
