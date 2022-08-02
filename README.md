@@ -55,23 +55,24 @@ In this case, we will deploy our Spark job using only two files: a configuration
 
 ## Sparkify Data Files
 
-The files used in this repository are all stored in the **data** folder. This folder contains the song dataset and the log dataset, both in json format.
+The files used in this repository are all stored in two **S3 buckets**. These buckets contain the song dataset and the log dataset, both in json format.
 ```
-**Song data: s3://udacity-dend/song_data
-```
-```
-**Log data: s3://udacity-dend/log_data
+Song data: s3://<udacity-bucket>/song_data
+
+Log data: s3://<udacity-bucket>/log_data
 ```
 
 **The song dataset**
 
 The song dataset is a subset of the [MillionDataSet](http://millionsongdataset.com/). These files contain real metadata about songs and artists. As mentioned earlier, it is a subset that contains only the first three letters of the track ID of each song; hence the partitioning.
 
+The song files have the following structure:
 ```
 song_data/A/B/C/TRABCEI128F424C983.json
 song_data/A/A/B/TRAABJL12903CDCF1A.json
 ```
 
+Below we can see what attributes make up a song file:
 ```
 {"num_songs": 1, "artist_id": "ARJIE2Y1187B994AB7", "artist_latitude": null, "artist_longitude": null, "artist_location": "", "artist_name": "Line Renaud", "song_id": "SOUPIRU12A6D4FA1E1", "title": "Der Kleine Dompfaff", "duration": 152.92036, "year": 0}
 ```
@@ -80,11 +81,20 @@ song_data/A/A/B/TRAABJL12903CDCF1A.json
 
 **The log Dataset**
 
-Unlike the song files, which are real data, the log files are simulated files. They were created using an external tool ([event simulator](https://github.com/Interana/eventsim)). These files are divided by month; however, generated data for the month of November was used.
+Unlike the song files, which are real data, the log files are simulated files. They were created using an external tool ([event simulator](https://github.com/Interana/eventsim)). These files are divided by month; however, only generated data for the month of November was used.
 
+The log file have the following structure:
 ```
 log_data/2018/11/2018-11-12-events.json
 log_data/2018/11/2018-11-13-events.json
+```
+
+**Output Datasets**
+
+The output files (dimensions and fact tables for our model) are also stored in an S3 bucket. The files here can be used later for further processing and conversion.
+Our output bucket has the following structure:
+```
+Output data: s3://<my-bucket>/<dim name>/<table name.parquet>/
 ```
 
 
