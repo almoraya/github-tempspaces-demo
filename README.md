@@ -149,18 +149,18 @@ Output data: s3://<my-bucket>/<dim name>/<table name.parquet>/
 
 ## List result files
 
-**Design of the database schema**
+**My output Data S3 Bucket
 
-This database was developed to contain two staging tables, four dimension tables and one fact table. The data copied from Sparkify S3 buckets where uploaded into our two staging tables. These tables where used to derived the five following tables. The dimension tables were created by grouping related attributes about the numerical values in the fact table, under one dimension; this avoided duplicating data when it was not necessary. As a result, we have the following dimension tables:
+At the end of our Spark job, according to the specification, we received our 5 folders with files partitioned by different attributes. These main folders are:
+1. artists/artists_table.parquet/
+2. songs/songs_table.parquet/
+3. time/time_table.parquet/
+4. users/user_table.parquet/
+5. songplays/songplays_table.parquet/
 
-- Songs
-- Artists
-- Users
-- Time
+These files can later be used to create a star schema model like the one below:
 
-The Songplays fact table was created to store partially denormalized data for analytical purposes. While the granularity of dimension tables is theoretically much higher, the fact table takes data with a finer grain.
-
-**ETL Pipeline**
-
-We wrote our ETL pipeline using Python. In doing so, we made extensive use of the **pyscopg2** library. This library allowed us to connect to our Redshit database, create a cursor to execute commands, and run all of our Python scripts from one place. To copy all the json files, perform the necessary transformations, and load the final data into our database, we created three Python scripts. Detailed explanations of the scripts and how they work can be found above in the section: **Execution of the Python Scripts**.
+<p align="center">
+<img  width="726" height= "804" src=/images/sparkify_er.png alt="Sparkify ER Diagram">
+</p>
 
