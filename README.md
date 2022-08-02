@@ -58,15 +58,13 @@ EMR stands for Elastic MapReduce and is a managed cluster platform that facilita
 ## How to run the Python scripts
 
 In order to be able to run the provided python scripts, the following criteria needs to be fulfilled:
-- Python must be installed in version 3.6.3 or higher.
-- It is highly recommended to install the necessary Python libraries in a virtual environment.
-- Access to an AWS account with permission to access S3 buckets and deploy a Redshift cluster.
-- Save all required string connections data in the *dwh.cfg* file
+- Access to an AWS account with permission to access S3 buckets and to create an EMR cluster.
+- Save all required string connections data in the *dl.cfg* file
 
 In this case, we will deploy our Spark job using only two files: a configuration file and a Python script etl.py. These are
 
-1. 
-2. the *etl.py* script: once the tables are created, we proceed to extract, transform and load the data into our database. This script acts as an orchestration engine between the raw data and our Redshift database. It relies heavily on the queries we develop for the sql_queries.py script. Once this script is executed, the Redshift database is populated with clean data.
+1. a *dl.cfg* file: this file contains our access key and secret key. These key are necessary to connect to our S3 bucket.
+2. a *etl.py* script: the main purpose of this script is to temporarily load data, transform it and upload it back to our S3 data store. In the end, our raw data will be used to create 5 usable tables.
 
 
 <a name="EMR"/>
