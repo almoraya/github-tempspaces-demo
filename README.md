@@ -76,7 +76,9 @@ In this case, we will deploy our Spark job using only two files: a configuration
 
 Below are excerpts from the Amazon EMR tutorial web page.[("Getting started with Amazon EMR")](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-gs.html)
 
-
+<p align="center">
+<img  width="50%" height= "50%" src=/images/awsemr.png alt="EMR Workflow">
+</p>
 
 
 <a name="files"/>
