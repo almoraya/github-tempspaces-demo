@@ -149,7 +149,7 @@ Output data: s3://<my-bucket>/<dim name>/<table name.parquet>/
 
 ## List result files
 
-**My output Data S3 Bucket
+**My output Data S3 Bucket**
 
 At the end of our Spark job, according to the specification, we received our 5 folders with files partitioned by different attributes. These main folders are:
 1. artists/artists_table.parquet/
