@@ -1,11 +1,12 @@
 # Sparkify shifts from Data Warehouse to Data Lake
 
-Sparkify, a startup with a new streaming app, has recently seen an increase in its customer base and song database system. After discussions with an IT consulting firm, the company has decided to move not only its operations to the cloud but also its data warehouse to a data lake. Sparkify hopes this will not only reduce costs, but also allow it to scale flexibly to meet its business needs.
+Sparkify, a startup with a new streaming app, has recently seen an increase in its customer base and its song database system. After discussions with an IT consulting firm, the company has decided to not only move its operations to the cloud, but also replace its data warehouse with a data lake. Sparkify hopes this will not only reduce costs and speed up response times, but also provide flexible scaling to meet business needs.
 
 
 ### Table of Contents
 
 - [Project Summary](#project)
+- [Data Warehouse vs Data Lake](#lake)
 - [Spark and EMR](#spark)
 - [How to run the Python Scripts](#python)
 - [Sparkify Data Files](#files)
@@ -19,6 +20,23 @@ Sparkify, a startup with a new streaming app, has recently seen an increase in i
 
 
 After a steady growth of its user base, Sparkify decided to move its data warehouse to a data lake. The company chose AWS as its cloud provider and currently uses S3 as its central repository to store all structured and unstructured data. Currently, all files are stored in JSON format. To extract, load and transform the data, Sparkify will use Spark as the ELT engine for its data lake. Once all the data is collected, processed and loaded back into S3, the analytics team will be able to access it to gain valuable insights into how users are using and consuming the service. 
+
+
+<a name="lake"/>
+
+## Data Warehouse vs Data Lake
+
+Data lakes and data warehouses are both commonly used for storing large amounts of data, but are used in different scenarios. A data lake is a "storage vessel" that can store a large amount of structured, semi-structured and unstructured data. The purpose of the stored data is not yet defined. A data warehouse, on the other hand, is a repository for structured, filtered data that has already been processed for a specific purpose. Data warehouse stores data in files or folders that help organize and use the data for strategic decision-making.
+
+The following is a tabular summary of its main differences:
+
+|   |Data Warehouse|Data Lake|
+|---|---|---|
+|Nature of Data|Is already processed|In its original form|
+|Intended use of the data|In use at the moment|To be defined|
+|Users of data|Business Analysts, Data Analysts|Data Engineers, Data Scientist|
+|Level of accessibility|Low|High|
+
 
 
 <a name="spark"/>
