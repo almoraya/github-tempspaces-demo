@@ -11,8 +11,7 @@ Sparkify, a startup with a new streaming app, has recently seen an increase in i
 - [How to run the Python Scripts](#python)
 - [Getting started with Amazon EMR](#EMR)
 - [Sparkify Data Files](#files)
-- [Design of the Database Schema and ETL Pipeline](#pipeline)
-- [Querying the Data](#query)
+- [List result files](#result)
 
 
 <a name="project"/>
@@ -146,9 +145,9 @@ Output data: s3://<my-bucket>/<dim name>/<table name.parquet>/
 ```
 
 
-<a name="pipeline"/>
+<a name="result"/>
 
-## Design of the database schema and ETL pipeline
+## List result files
 
 **Design of the database schema**
 
@@ -165,7 +164,3 @@ The Songplays fact table was created to store partially denormalized data for an
 
 We wrote our ETL pipeline using Python. In doing so, we made extensive use of the **pyscopg2** library. This library allowed us to connect to our Redshit database, create a cursor to execute commands, and run all of our Python scripts from one place. To copy all the json files, perform the necessary transformations, and load the final data into our database, we created three Python scripts. Detailed explanations of the scripts and how they work can be found above in the section: **Execution of the Python Scripts**.
 
-
-<a name="query"/>
-
-## Querying the Data
