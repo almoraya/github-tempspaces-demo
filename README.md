@@ -83,12 +83,19 @@ Below are some steps to consider when working with Amazon EMR. [("Getting starte
 In order to be able to run the etl.py script on Amazon EMR you need to consider the following:
 
 - Step 1: Plan and configure an Amazon EMR Cluster
-  - Prepare storage for Amazon EMR (have access to your S3 bucket)
-  - Prepare an application with input data from Amazon EMR (udacity bucket with both song and log files)
+  - Choose a storage solution like S3.
+  - Choose a processing engine like Spark
   - Prepare the etl.py Pyspark script for EMR
+  - Launch the cluster
 
-- Step 2: Submit your etl.py script to Amazon EMR
-  - View results --> creation of dimension tables stores in your output data bucket in S3
+- Step 2: Manage your Amazon EMR Cluster
+  - Submit your etl.py script to cluster
+  - Wait for tasks to finish
+  - View results of your job
+
+- Step 3: Clean Up your EMR Cluster
+  - Terminate your cluster
+  - If necessary, delete your resources
 
 
 <a name="files"/>
