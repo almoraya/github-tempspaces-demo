@@ -61,7 +61,9 @@ In order to be able to run the provided python scripts, the following criteria n
 - Access to an AWS account with permission to access S3 buckets and to create an EMR cluster.
 - Save all required string connections data in the *dl.cfg* file
 
-In this case, we will deploy our Spark job using only two files: a configuration file and a Python script etl.py. These are
+In this case, we will deploy our Spark job using only two files: a configuration file and a Python script etl.py. 
+
+These two files are:
 
 1. a *dl.cfg* file: this file contains our access key and secret key. These key are necessary to connect to our S3 bucket.
 2. a *etl.py* script: the main purpose of this script is to temporarily load data, transform it and upload it back to our S3 data store. In the end, our raw data will be used to create 5 usable tables.
