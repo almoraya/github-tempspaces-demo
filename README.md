@@ -56,6 +56,12 @@ In this case, we will deploy our Spark job using only two files: a configuration
 ## Sparkify Data Files
 
 The files used in this repository are all stored in the **data** folder. This folder contains the song dataset and the log dataset, both in json format.
+```
+**Song data: s3://udacity-dend/song_data
+````
+````
+**Log data: s3://udacity-dend/log_data
+```
 
 **The song dataset**
 
