@@ -72,7 +72,7 @@ In this case, we will deploy our Spark job using only two files: a configuration
 
 <a name="EMR"/>
 
-## Getting started with Amazon EMR(https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-gs.html)
+## Getting started with Amazon EMR
 
 Below are excerpts from the Amazon EMR tutorial web page.[("Getting started with Amazon EMR")](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-gs.html)
 
