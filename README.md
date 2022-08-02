@@ -9,6 +9,7 @@ Sparkify, a startup with a new streaming app, has recently seen an increase in i
 - [Data Warehouse vs Data Lake](#lake)
 - [Spark and EMR](#spark)
 - [How to run the Python Scripts](#python)
+- [Getting started with Amazon EMR](#EMR)
 - [Sparkify Data Files](#files)
 - [Design of the Database Schema and ETL Pipeline](#pipeline)
 - [Querying the Data](#query)
@@ -67,6 +68,14 @@ In this case, we will deploy our Spark job using only two files: a configuration
 
 1. 
 2. the *etl.py* script: once the tables are created, we proceed to extract, transform and load the data into our database. This script acts as an orchestration engine between the raw data and our Redshift database. It relies heavily on the queries we develop for the sql_queries.py script. Once this script is executed, the Redshift database is populated with clean data.
+
+
+<a name="EMR"/>
+
+## [Getting started with Amazon EMR](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-gs.html)
+
+
+
 
 
 <a name="files"/>
