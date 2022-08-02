@@ -1,4 +1,4 @@
-# Sparkify goes big: Data Warehousing with Redshift
+# Sparkify shifts from Data Warehouse to Data Lake
 
 Sparkify, a startup with a new streaming app, has recently seen an increase in its customer base and song database system. After discussions with an IT consulting firm, the company has decided to move not only its operations to the cloud but also its data warehouse to a data lake. Sparkify hopes this will not only reduce costs, but also allow it to scale flexibly to meet its business needs.
 
@@ -61,9 +61,23 @@ The files used in this repository are all stored in the **data** folder. This fo
 
 The song dataset is a subset of the [MillionDataSet](http://millionsongdataset.com/). These files contain real metadata about songs and artists. As mentioned earlier, it is a subset that contains only the first three letters of the track ID of each song; hence the partitioning.
 
+```
+song_data/A/B/C/TRABCEI128F424C983.json
+song_data/A/A/B/TRAABJL12903CDCF1A.json
+```
+
+
+
+
+
 **The log Dataset**
 
 Unlike the song files, which are real data, the log files are simulated files. They were created using an external tool ([event simulator](https://github.com/Interana/eventsim)). These files are divided by month; however, generated data for the month of November was used.
+
+```
+log_data/2018/11/2018-11-12-events.json
+log_data/2018/11/2018-11-13-events.json
+```
 
 
 <a name="pipeline"/>
